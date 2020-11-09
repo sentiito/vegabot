@@ -55,7 +55,7 @@ client.on('ready', () => {
         message.channel.send(ip)
     })
     
-        command(client, 'ip', (message) => {
+        command(client, 'vote', (message) => {
 
         // Commande = !vote
         const vote = new Discord.MessageEmbed()
