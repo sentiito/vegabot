@@ -5,6 +5,7 @@ const config = require('./config.json')
 const command = require('./command')
 const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
 const ipValue = 'connect cfx.re/join/vb4eee'
+const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
 
 // LE BOT S'ALLUME
 client.on('ready', () => {
@@ -54,6 +55,23 @@ client.on('ready', () => {
         message.channel.send(ip)
     })
     
+        command(client, 'ip', (message) => {
+
+        // Commande = !vote
+        const vote = new Discord.MessageEmbed()
+
+        .setAuthor('VegaWorld V2', logo)
+        .setColor('#ed00f3')
+        .addFields(
+            {
+            name: 'Vote serveur :',
+            value: voteValue
+            }
+        )
+        
+        message.channel.send(vote)
+    })
+    
         command(client, 'vega', (message) => {
         //Verification si le Serv est on
 
@@ -75,7 +93,7 @@ client.on('ready', () => {
             },
             {
             name: 'Vote serveur',
-            value: 'https://top-serveurs.net/gta/vegaworld-rp-v2 '
+            value: voteValue
             },
             {
             name: 'VegaLife',
