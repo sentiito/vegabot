@@ -36,7 +36,30 @@ client.on('ready', () => {
         }
     })
 
-    command(client, 'statut', (message) => {
+    command(client, 'vega', (message) => {
+
+        // Commande = !vega
+        const ip = new Discord.MessageEmbed()
+
+        .setAuthor('VegaWorld V2', logo)
+        .setThumbnail(logo)
+        // .setTitle('VegaWorld V2')
+        .setColor('#ed00f3')
+        .addFields(
+            {
+            name: '**Statut de Vegaworld :**',
+            value: statusServ
+            },
+            {
+            name: 'IP :',
+            value: 'connect cfx.re/join/vb4eee'
+            }
+        )
+        
+        message.channel.send(ip)
+    })
+    
+        command(client, 'statut', (message) => {
         //Verification si le Serv est on
 
         // Commande = !status
