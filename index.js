@@ -4,7 +4,7 @@ const client = new Discord.Client()
 const config = require('./config.json')
 const command = require('./command')
 const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
-const ipValue = 'fivem://connect/connect cfx.re/join/vb4eee'
+const ipValue = 'connect cfx.re/join/vb4eee'
 const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
 
 // LE BOT S'ALLUME
@@ -45,7 +45,6 @@ client.on('ready', () => {
 
         .setAuthor('VegaWorld V2', logo)
         .setColor('#ed00f3')
-        .setURL(ipValue)
         .addFields(
             {
             name: 'IP :',
