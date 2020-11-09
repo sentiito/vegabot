@@ -53,7 +53,7 @@ client.on('ready', () => {
             },
             {
             name: 'IP :',
-            value: 'cfx.re/join/vb4eee'
+            value: 'connect cfx.re/join/vb4eee'
             },
             {
             name: 'Vote serveur',
