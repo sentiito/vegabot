@@ -45,6 +45,7 @@ client.on('ready', () => {
 
         .setAuthor('VegaWorld V2', logo)
         .setColor('#ed00f3')
+        .setURL(ipValue)
         .addFields(
             {
             name: 'IP :',
