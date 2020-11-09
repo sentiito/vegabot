@@ -10,9 +10,9 @@ client.on('ready', () => {
     //
     console.log('Le bot est allumé')
     
-    const etatServ = client.channels.cache.find(channel => channel.id === "775025509339103233")
-    const botChan = "774646735142125568"
-    const idCitoyen = '<@&747833614686748682>'
+    const etatServ = client.channels.cache.find(channel => channel.id === "754724334785921124")
+    const botChan = "749078187681644594"
+    const idCitoyen = '<@&729022711833034763>'
     var statusServ = '.'
 
     client.on('message', message => {
