@@ -36,7 +36,7 @@ client.on('ready', () => {
         }
     })
 
-    command(client, 'status', (message) => {
+    command(client, 'statut', (message) => {
         //Verification si le Serv est on
 
         // Commande = !status
