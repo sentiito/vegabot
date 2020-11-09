@@ -4,6 +4,7 @@ const client = new Discord.Client()
 const config = require('./config.json')
 const command = require('./command')
 const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
+const ipValue = 'connect cfx.re/join/vb4eee'
 
 // LE BOT S'ALLUME
 client.on('ready', () => {
@@ -13,7 +14,7 @@ client.on('ready', () => {
     const etatServ = client.channels.cache.find(channel => channel.id === "754724334785921124")
     const botChan = "749078187681644594"
     const idCitoyen = '<@&729022711833034763>'
-    var statusServ = '.'
+    var statusServ = 'Le serveur est ON'
 
     client.on('message', message => {
         if(message.channel.id === botChan) {
@@ -36,33 +37,27 @@ client.on('ready', () => {
         }
     })
 
-    command(client, 'vega', (message) => {
+    command(client, 'ip', (message) => {
 
-        // Commande = !vega
+        // Commande = !ip
         const ip = new Discord.MessageEmbed()
 
         .setAuthor('VegaWorld V2', logo)
-        .setThumbnail(logo)
-        // .setTitle('VegaWorld V2')
         .setColor('#ed00f3')
         .addFields(
             {
-            name: '**Statut de Vegaworld :**',
-            value: statusServ
-            },
-            {
             name: 'IP :',
-            value: 'connect cfx.re/join/vb4eee'
+            value: ipValue
             }
         )
         
         message.channel.send(ip)
     })
     
-        command(client, 'statut', (message) => {
+        command(client, 'vega', (message) => {
         //Verification si le Serv est on
 
-        // Commande = !status
+        // Commande = !vega
         const embed = new Discord.MessageEmbed()
 
         .setAuthor('VegaWorld V2', logo)
@@ -76,7 +71,7 @@ client.on('ready', () => {
             },
             {
             name: 'IP :',
-            value: 'connect cfx.re/join/vb4eee'
+            value: ipValue
             },
             {
             name: 'Vote serveur',
