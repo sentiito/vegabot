@@ -56,6 +56,10 @@ client.on('ready', () => {
             value: 'cfx.re/join/vb4eee'
             },
             {
+            name: 'Vote serveur',
+            value: 'https://top-serveurs.net/gta/vegaworld-rp-v2 '
+            },
+            {
             name: 'VegaLife',
             value: 'https://vegalife.fr/'
             },
