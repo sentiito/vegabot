@@ -1,4 +1,6 @@
 const Discord = require('discord.js')
+const request = require('request')
+const cheerio = require('cheerio')
 const client = new Discord.Client()
 
 const config = require('./config.json')
@@ -8,8 +10,6 @@ const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
 const ipValue = 'connect cfx.re/join/vb4eee'
 const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
 
-const request = require('request')
-const cheerio = require('cheerio')
 let IGplayer
 
 // LE BOT S'ALLUME
