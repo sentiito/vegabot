@@ -7,6 +7,7 @@ const { link } = require('fs')
 const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
 const ipValue = 'connect cfx.re/join/vb4eee'
 const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
+const ipLaunch = '<fivem://connect/cfx.re/join/vb4eee>'
 
 const request = require('request')
 const cheerio = require('cheerio')
@@ -83,6 +84,10 @@ client.on('ready', () => {
         .setColor('#ed00f3')
         .addFields(
             {
+            name: 'Direct connect :',
+            value: ipLaunch
+            },
+            {
             name: 'IP :',
             value: ipValue
             }
@@ -122,7 +127,6 @@ client.on('ready', () => {
 
                 .setAuthor('VegaWorld V2', logo)
                 .setThumbnail(logo)
-                // .setTitle('VegaWorld V2')
                 .setColor('#ed00f3')
                 .addFields(
                     {
@@ -132,6 +136,10 @@ client.on('ready', () => {
                     {
                     name: 'Joueurs IG :',
                     value: IGplayer
+                    },
+                    {
+                    name: 'Direct connect :',
+                    value: ipLaunch
                     },
                     {
                     name: 'IP :',
