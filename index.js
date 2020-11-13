@@ -22,7 +22,7 @@ client.on('ready', () => {
     const idCitoyen = '<@&729022711833034763>'
     var statusServ = 'Le serveur est ON'
 
-    // Statut serveur
+    // Commande STAFF
     client.on('message', message => {
         if(message.channel.id === botChan) {
             if(message.content.startsWith(config.prefix + 'reboot')) {
@@ -46,32 +46,34 @@ client.on('ready', () => {
 
     // Joueurs ingame
     client.on('message', message => {
-        if(message.content.startsWith(config.prefix + 'ig')) {
+        if(message.channel.id === botChan) {
+            if(message.content.startsWith(config.prefix + 'ig')) {
 
-            request('https://top-serveurs.net/gta/vegaworld-rp-v2', (error, response, html) => {
-                if(!error || response.statusCode == 200) {
-                    const $ = cheerio.load(html)
-                    const playersIG = $('.label.label-success.label-players')
+                request('https://top-serveurs.net/gta/vegaworld-rp-v2', (error, response, html) => {
+                    if(!error || response.statusCode == 200) {
+                        const $ = cheerio.load(html)
+                        const playersIG = $('.label.label-success.label-players')
 
-                    IGplayer = playersIG.html()
-                    console.log(IGplayer)
+                        IGplayer = playersIG.html()
+                        console.log(IGplayer)
 
-                    // Commande = !ig
-                    const ig = new Discord.MessageEmbed()
+                        // Commande = !ig
+                        const ig = new Discord.MessageEmbed()
 
-                    .setAuthor('VegaWorld V2', logo)
-                    .setColor('#ed00f3')
-                    .addFields(
-                        {
-                        name: 'Joueurs IG :',
-                        value: IGplayer
-                        }
-                    )
-                    message.channel.send(ig)
+                        .setAuthor('VegaWorld V2', logo)
+                        .setColor('#ed00f3')
+                        .addFields(
+                            {
+                            name: 'Joueurs IG :',
+                            value: IGplayer
+                            }
+                        )
+                        message.channel.send(ig)
 
-                }
-            });
+                    }
+                });
 
+            }
         }
     })
 
@@ -132,10 +134,6 @@ client.on('ready', () => {
                     {
                     name: '**Statut de Vegaworld :**',
                     value: statusServ
-                    },
-                    {
-                    name: 'Joueurs IG :',
-                    value: IGplayer
                     },
                     {
                     name: 'Direct connect :',
