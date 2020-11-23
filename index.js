@@ -8,6 +8,7 @@ const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
 const ipValue = 'connect cfx.re/join/vb4eee'
 const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
 const ipLaunch = '<fivem://connect/cfx.re/join/vb4eee>'
+const localhost = '<fivem://connect/localhost>'
 
 const request = require('request')
 const cheerio = require('cheerio')
@@ -96,6 +97,25 @@ client.on('ready', () => {
         )
         
         message.channel.send(ip)
+    })
+
+    command(client, 'local', (message) => {
+
+        // Commande = !local
+        if(message.channel.id === botChan || message.channel.id === '747542137867993119') {
+            const ip = new Discord.MessageEmbed()
+
+            .setAuthor('VegaWorld V2', logo)
+            .setColor('#ed00f3')
+            .addFields(
+                {
+                name: 'Connexion Localhost :',
+                value: localhost
+                }
+            )
+            
+            message.channel.send(ip)
+        }
     })
     
     command(client, 'vote', (message) => {
