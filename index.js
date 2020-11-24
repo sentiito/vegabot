@@ -38,10 +38,6 @@ client.on('ready', () => {
                 statusServ = "le serveur est OFF"
                 etatServ.send(msgOff)
 
-            } else if(message.content.startsWith(config.prefix + 'on')) {
-                const msgOn = idCitoyen + ' Le serveur est ON'
-                statusServ = "Le serveur est ON"
-                etatServ.send(msgOn)
             }
         }
     })
