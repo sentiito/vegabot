@@ -9,7 +9,6 @@ const ipValue = 'connect cfx.re/join/vb4eee'
 const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
 const ipLaunch = '<fivem://connect/cfx.re/join/vb4eee>'
 const localhost = '<fivem://connect/localhost>'
-const bStaff = '747542137867993119'
 
 const request = require('request')
 const cheerio = require('cheerio')
@@ -38,13 +37,33 @@ client.on('ready', () => {
                 statusServ = "le serveur est OFF"
                 etatServ.send(msgOff)
 
+            } else if(message.content.startsWith(config.prefix + 'on')) {
+                const msgOn = idCitoyen + ' Le serveur est ON'
+                const ipOn = new Discord.MessageEmbed()
+
+                .setAuthor('VegaWorld V2', logo)
+                .setColor('#ed00f3')
+                .addFields(
+                    {
+                    name: 'Direct connect :',
+                    value: ipLaunch
+                    },
+                    {
+                    name: 'IP :',
+                    value: ipValue
+                    }
+                )
+                statusServ = "Le serveur est ON"
+
+                etatServ.send(msgOn)
+                etatServ.send(ipOn)
             }
         }
     })
 
     // Joueurs ingame
     client.on('message', message => {
-        if(message.channel.id === botChan || message.channel.id === bStaff) {
+        if(message.channel.id === botChan) {
             if(message.content.startsWith(config.prefix + 'ig')) {
 
                 request('https://top-serveurs.net/gta/vegaworld-rp-v2', (error, response, html) => {
@@ -99,8 +118,8 @@ client.on('ready', () => {
     command(client, 'local', (message) => {
 
         // Commande = !local
-        if(message.channel.id === botChan || message.channel.id === bStaff) {
-            const ip = new Discord.MessageEmbed()
+        if(message.channel.id === botChan || message.channel.id === '747542137867993119') {
+            const local = new Discord.MessageEmbed()
 
             .setAuthor('VegaWorld V2', logo)
             .setColor('#ed00f3')
@@ -111,7 +130,7 @@ client.on('ready', () => {
                 }
             )
             
-            message.channel.send(ip)
+            message.channel.send(local)
         }
     })
     
