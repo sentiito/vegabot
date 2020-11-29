@@ -5,9 +5,9 @@ const config = require('./config.json')
 const command = require('./command')
 const { link } = require('fs')
 const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
-const ipValue = 'connect cfx.re/join/vb4eee'
+const ipValue = 'connect 45.156.84.97:38125'
 const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
-const ipLaunch = '<fivem://connect/cfx.re/join/vb4eee>'
+const ipLaunch = '<fivem://connect/45.156.84.97:38125>'
 const localhost = '<fivem://connect/localhost>'
 
 const request = require('request')
