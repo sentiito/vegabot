@@ -6,7 +6,7 @@ const command = require('./command')
 const { link } = require('fs')
 const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
 const ipValue = 'connect 45.156.84.97:38125'
-const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
+const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2-5fc5a72f3fe70'
 const ipLaunch = '<fivem://connect/45.156.84.97:38125>'
 const localhost = '<fivem://connect/localhost>'
 
