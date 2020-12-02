@@ -60,6 +60,28 @@ client.on('ready', () => {
             }
         }
     })
+    
+    command(client, 'dev', (message) => {
+        if(message.channel.id === botChan || message.channel.id === '747542137867993119' || message.channel.id === '783633785353797642') {
+            // Commande = !dev
+            const dev = new Discord.MessageEmbed()
+
+            .setAuthor('VegaWorld V2', logo)
+            .setColor('#ed00f3')
+            .addFields(
+                {
+                name: 'Direct connect :',
+                value: '<fivem://connect/game.vegaworldv2.fr>'
+                },
+                {
+                name: 'IP :',
+                value: 'connect game.vegaworldv2.fr'
+                }
+            )
+
+            message.channel.send(dev)
+        }
+    })
 
     // Joueurs ingame
     client.on('message', message => {
