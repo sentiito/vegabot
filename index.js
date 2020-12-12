@@ -5,10 +5,12 @@ const config = require('./config.json')
 const command = require('./command')
 const { link } = require('fs')
 const logo = 'https://i.ibb.co/4Nnb7dk/V2.png'
-const ipValue = 'connect 45.156.84.97:38125'
-const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2-5fc5a72f3fe70'
-const ipLaunch = '<fivem://connect/45.156.84.97:38125>'
+const ipValue = 'connect game.alive.vegaworldv2.fr'
+const voteValue = 'https://top-serveurs.net/gta/vegaworld-rp-v2'
+const ipLaunch = '<fivem://connect/game.alive.vegaworldv2.fr>'
 const localhost = '<fivem://connect/localhost>'
+const tsLaunch = '<ts3server://ts.alive.vegaworldv2.fr>'
+const Ts = 'ts.alive.vegaworldv2.fr'
 
 const request = require('request')
 const cheerio = require('cheerio')
@@ -41,7 +43,7 @@ client.on('ready', () => {
                 const msgOn = idCitoyen + ' Le serveur est ON'
                 const ipOn = new Discord.MessageEmbed()
 
-                .setAuthor('VegaWorld V2', logo)
+                .setAuthor('VegaWorld X Alive', logo)
                 .setColor('#ed00f3')
                 .addFields(
                     {
@@ -58,28 +60,6 @@ client.on('ready', () => {
                 etatServ.send(msgOn)
                 etatServ.send(ipOn)
             }
-        }
-    })
-    
-    command(client, 'dev', (message) => {
-        if(message.channel.id === botChan || message.channel.id === '747542137867993119' || message.channel.id === '783633785353797642') {
-            // Commande = !dev
-            const dev = new Discord.MessageEmbed()
-
-            .setAuthor('VegaWorld V2', logo)
-            .setColor('#ed00f3')
-            .addFields(
-                {
-                name: 'Direct connect :',
-                value: '<fivem://connect/game.vegaworldv2.fr>'
-                },
-                {
-                name: 'IP :',
-                value: 'connect game.vegaworldv2.fr'
-                }
-            )
-
-            message.channel.send(dev)
         }
     })
 
@@ -99,7 +79,7 @@ client.on('ready', () => {
                         // Commande = !ig
                         const ig = new Discord.MessageEmbed()
 
-                        .setAuthor('VegaWorld V2', logo)
+                        .setAuthor('VegaWorld X Alive', logo)
                         .setColor('#ed00f3')
                         .addFields(
                             {
@@ -121,7 +101,7 @@ client.on('ready', () => {
         // Commande = !ip
         const ip = new Discord.MessageEmbed()
 
-        .setAuthor('VegaWorld V2', logo)
+        .setAuthor('VegaWorld X Alive', logo)
         .setColor('#ed00f3')
         .addFields(
             {
@@ -137,13 +117,34 @@ client.on('ready', () => {
         message.channel.send(ip)
     })
 
+    command(client, 'ts', (message) => {
+
+        // Commande = !ts
+        const ts = new Discord.MessageEmbed()
+
+        .setAuthor('VegaWorld X Alive', logo)
+        .setColor('#ed00f3')
+        .addFields(
+            {
+            name: 'Connect TS:',
+            value: tsLaunch
+            },
+            {
+            name: 'Adresse :',
+            value: Ts
+            }
+        )
+        
+        message.channel.send(ts)
+    })
+
     command(client, 'local', (message) => {
 
         // Commande = !local
         if(message.channel.id === botChan || message.channel.id === '747542137867993119') {
             const local = new Discord.MessageEmbed()
 
-            .setAuthor('VegaWorld V2', logo)
+            .setAuthor('VegaWorld X Alive', logo)
             .setColor('#ed00f3')
             .addFields(
                 {
@@ -161,7 +162,7 @@ client.on('ready', () => {
         // Commande = !vote
         const vote = new Discord.MessageEmbed()
 
-        .setAuthor('VegaWorld V2', logo)
+        .setAuthor('VegaWorld X Alive', logo)
         .setColor('#ed00f3')
         .addFields(
             {
@@ -185,7 +186,7 @@ client.on('ready', () => {
 
                 const embed = new Discord.MessageEmbed()
 
-                .setAuthor('VegaWorld V2', logo)
+                .setAuthor('VegaWorld X Alive', logo)
                 .setThumbnail(logo)
                 .setColor('#ed00f3')
                 .addFields(
@@ -198,8 +199,8 @@ client.on('ready', () => {
                     value: ipLaunch
                     },
                     {
-                    name: 'IP :',
-                    value: ipValue
+                    name: 'TS :',
+                    value: tsLaunch
                     },
                     {
                     name: 'Vote serveur',
