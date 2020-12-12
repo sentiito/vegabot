@@ -96,47 +96,47 @@ client.on('ready', () => {
         }
     })
 
-    command(client, 'ip', (message) => {
+    // command(client, 'ip', (message) => {
 
-        // Commande = !ip
-        const ip = new Discord.MessageEmbed()
+    //     // Commande = !ip
+    //     const ip = new Discord.MessageEmbed()
 
-        .setAuthor('VegaWorld X Alive', logo)
-        .setColor('#ed00f3')
-        .addFields(
-            {
-            name: 'Direct connect :',
-            value: ipLaunch
-            },
-            {
-            name: 'IP :',
-            value: ipValue
-            }
-        )
+    //     .setAuthor('VegaWorld X Alive', logo)
+    //     .setColor('#ed00f3')
+    //     .addFields(
+    //         {
+    //         name: 'Direct connect :',
+    //         value: ipLaunch
+    //         },
+    //         {
+    //         name: 'IP :',
+    //         value: ipValue
+    //         }
+    //     )
         
-        message.channel.send(ip)
-    })
+    //     message.channel.send(ip)
+    // })
 
-    command(client, 'ts', (message) => {
+    // command(client, 'ts', (message) => {
 
-        // Commande = !ts
-        const ts = new Discord.MessageEmbed()
+    //     // Commande = !ts
+    //     const ts = new Discord.MessageEmbed()
 
-        .setAuthor('VegaWorld X Alive', logo)
-        .setColor('#ed00f3')
-        .addFields(
-            {
-            name: 'Connect TS:',
-            value: tsLaunch
-            },
-            {
-            name: 'Adresse :',
-            value: Ts
-            }
-        )
+    //     .setAuthor('VegaWorld X Alive', logo)
+    //     .setColor('#ed00f3')
+    //     .addFields(
+    //         {
+    //         name: 'Connect TS:',
+    //         value: tsLaunch
+    //         },
+    //         {
+    //         name: 'Adresse :',
+    //         value: Ts
+    //         }
+    //     )
         
-        message.channel.send(ts)
-    })
+    //     message.channel.send(ts)
+    // })
 
     command(client, 'local', (message) => {
 
