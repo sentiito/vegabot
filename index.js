@@ -24,6 +24,7 @@ client.on('ready', () => {
     const botChan = "749078187681644594"
     const idCitoyen = '<@&729022711833034763>'
     var statusServ = 'Le serveur est ON'
+    var mdpValue = 'Vegalife'
 
     // Commande STAFF
     client.on('message', message => {
@@ -61,6 +62,23 @@ client.on('ready', () => {
                 etatServ.send(ipOn)
             }
         }
+    })
+
+    command(client, 'mdp', (message) => {
+
+        // Commande = !mdp
+        const mdp = new Discord.MessageEmbed()
+
+        .setAuthor('VegaWorld X Alive', logo)
+        .setColor('#ed00f3')
+        .addFields(
+            {
+            name: 'Mot de passe du serv: ',
+            value: mdpValue
+            }
+        )
+        
+        message.channel.send(mdp)
     })
 
     // Joueurs ingame
